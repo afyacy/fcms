@@ -1,0 +1,36 @@
+.navbar{
+    background: #027FDA;
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 25px !important;
+    font-weight: bolder;
+}
+.row{
+    padding: 0px;
+    margin:20px;
+}
+.col-md-4{
+    padding: 0px;
+}
+.card-img-top{
+    /*width: 30% !important;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+blockquote{
+    border-width: 3px !important;
+    border-color: #027FDA;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #33A8FF;
+    color: white;
+    text-align: center;
+  }
