@@ -132,7 +132,7 @@ var Calculator = {
   
   $(document).ready(function() {
   
-    $(".btn").click(function(e) {
+    $(".btnc").click(function(e) {
       e.preventDefault();
   
       if ($(this).data('constant') != undefined){
