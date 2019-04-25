@@ -28,7 +28,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for ..." aria-label="search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn bg-primary" type="submit">
+                        <button class="btn bg-primary" type="button">
                             <i class="fa fa-search text-light"></i>
                         </button>
                     </div>
@@ -113,7 +113,7 @@
                     </form>
                 </li>
             </ul>
-            <div class="card-body row">
+            <div class="card-body row mb-0 mt-0">
                 <div class="col-auto my-1">
                     <button type="button" class="btn btn-primary">Add</button>
                 </div>
@@ -125,90 +125,53 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 card">
-            <div class="">
-            <div class="hero-unit bg-light pt-2 pb-2" id="calculator-wrapper">
-                <div class="row">
-                    <div class="col-md-4 bg-white">
-                    <div id="calculator-screen" class="uneditable-input pl-1"></div>
-                    </div>
-                    <div class="col-md-4" style="text-align: center;">
-                    <div class="visible-phone">
-                        =
-                    </div>
-                    </div>
-                    <div class="col-md-4 bg-white p-1">
-                    <div id="calculator-result"  class="uneditable-input">0</div>
-                    </div>
-                </div>
-            </div>
+        
+        <div class="col-md-3">                
+                <form name="calculator" class="calc mb-3">         
+                    <input type="text" class="calctext" name="answer" />
+                    <br>
+                    
+                    <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+                    <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+                    <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+                    <input type="button" class="signb" value=" + " onclick="calculator.answer.value += '+'" />
+                    <br/>
+                    
+                    <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+                    <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+                    <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+                    <input type="button" class="signb" value=" - " onclick="calculator.answer.value += '-'" />
+                    </br>
+                
+                    <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+                    <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+                    <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+                    <input type="button" class="signb" value=" x " onclick="calculator.answer.value += '*'" />
+                    </br>
 
-            <div class="row">
+                    <input type="button" value=" c " onclick="calculator.answer.value = ''" />
+                    <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+                    <input type="button" class="signbe" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+                    <input type="button"  class="signb" value=" / " onclick="calculator.answer.value += '/'" />
+                    </br>
+                </form>
 
-            <div class="col-md-8">
-                <div id="calc-board">
-                <div class="row-fluid">
-                    <a href="#" class="btnc btn btn-outline-dark" data-constant="SIN" data-key="115">sin</a>
-                    <a href="#" class="btnc btn btn-outline-dark" data-constant="COS" data-key="99">cos</a>
-                    <a href="#" class="btnc btn btn-outline-dark" data-constant="MOD" data-key="109">md</a>
-                    <a href="#" class="btnc btn btn-danger" data-method="reset" data-key="8">C</a>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="row-fluid mt-2">
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="55">7</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="56">8</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="57">9</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="BRO" data-key="40">(</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="BRC" data-key="41">)</a>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Hi Prince!</strong>  A simple success alert—check it out!.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="row-fluid mt-2">
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="52">4</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="53">5</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="54">6</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="MIN" data-key="45">-</a>
-                    <a href="#" class="btnc btn btn-outline-dark" data-constant="SUM" data-key="43">+</a>
-                </div>
-                <div class="row-fluid mt-2">
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="49">1</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="50">2</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="51">3</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="DIV" data-key="47">/</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="MULT" data-key="42">*</a>
-                </div>
-                <div class="row-fluid mt-2">
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="46">.</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-key="48">0</a>
-                    <a href="#" class="btnc btn btn-outline-dark mr-1" data-constant="PROC" data-key="37">%</a>
-                    <a href="#" class="btnc btn btn-primary" data-method="calculate" data-key="61">=</a>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 bg-light">
-                <legend class="text-center">History</legend>
-                <div id="calc-panel">
-                <div id="calc-history">
-                    <ol id="calc-history-list"></ol>
-                </div>
-                </div>
-            </div>
-            <hr>
-
-            </div>
-            </div>
-            <hr>
-
-            <div class="alert alert-primary" role="alert">
-            This is a primary alert—check it out!
-            </div>
-            <div class="alert alert-success" role="alert">
-            This is a success alert—check it out!
-            </div>
-            <div class="alert alert-danger" role="alert">
-            This is a danger alert—check it out!
-            </div>
         </div>
+        
         <!-- Start Table -->
-        <div class="col-md-4">
+        <div class="col-md-5 ">
             <div class="table-responsive-sm table-bordered">
                 <div class="table-responsive-md">
                 <table class="table">
@@ -326,6 +289,5 @@
     </div>
 
     <script src="vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
